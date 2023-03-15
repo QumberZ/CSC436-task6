@@ -46,6 +46,8 @@ const Book = () => {
           <p className='data-item'>Author: {book.author}</p>
           <p className='data-item'>Publisher: {book.publisher}</p>
           <p className='data-item'>Publication Year: {book.year}</p>
+          <p className='data-item'>Number of Pages: {book.pages}</p>
+          <p className='data-item'>Country Origin: {book.country}</p>
           <img  className='data-item' src={book.imageURL} alt="" />
         
         </div>

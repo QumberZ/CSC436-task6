@@ -39,13 +39,23 @@ const Books = () => {
       )}
       {!loading && !error && (
         <>
-          <ul>
+  <h1 style={{ fontSize: "2rem", textAlign: "center", color: "blue" }}>
+          WELCOME TO THE BOOK CLUB
+        </h1>
+          <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {books.map((book) => (
-              <li key={book.id}>
-                <Link to={`/books/${book.id}`}>{book.title}</Link>
-              </li>
+              <div key={book.id} className="border p-4 rounded-md shadow">
+                <Link to={`/books/${book.id}`}>
+                  <h2 className="text-lg font-bold mb-2 hover:underline">
+                    {book.title}
+                  </h2>
+                </Link>
+              </div>
             ))}
-          </ul>
+          </div>
+          <div className="mt-4">
+
+          </div>
         </>
       )}
     </Container>
